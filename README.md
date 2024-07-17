@@ -1,8 +1,8 @@
 # myapp-operator
-// A simple Kubernetes operator. this is for test only not for prod.
+ A simple Kubernetes operator. this is for test only not for prod.
 
 ## Description
-// TODO(user): An in-depth paragraph about your project and overview of use
+// TODO
 
 ## Getting Started
 
