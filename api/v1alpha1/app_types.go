@@ -20,26 +20,18 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )
 
-// EDIT THIS FILE!  THIS IS SCAFFOLDING FOR YOU TO OWN!
-// NOTE: json tags are required.  Any new fields you add must have json tags for the fields to be serialized.
-
 // AppSpec defines the desired state of App
 type AppSpec struct {
-	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
-
-	// Foo is an example field of App. Edit app_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	Replicas int32 `json:"replicas,omitempty"`
 }
 
 // AppStatus defines the observed state of App
 type AppStatus struct {
-	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
-	// Important: Run "make" to regenerate code after modifying this file
+	Nodes []string `json:"nodes,omitempty"`
 }
 
-//+kubebuilder:object:root=true
-//+kubebuilder:subresource:status
+// +kubebuilder:object:root=true
+// +kubebuilder:subresource:status
 
 // App is the Schema for the apps API
 type App struct {
@@ -50,7 +42,7 @@ type App struct {
 	Status AppStatus `json:"status,omitempty"`
 }
 
-//+kubebuilder:object:root=true
+// +kubebuilder:object:root=true
 
 // AppList contains a list of App
 type AppList struct {
