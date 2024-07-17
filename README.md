@@ -1,5 +1,5 @@
 # myapp-operator
-// TODO(user): Add simple overview of use/purpose
+// A simple Kubernetes operator. this is for test only not for prod.
 
 ## Description
 // TODO(user): An in-depth paragraph about your project and overview of use
